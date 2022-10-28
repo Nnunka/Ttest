@@ -1,148 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
+<!--toolbar + logo-->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#77cff2"
+        android:background="#41c0f2"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="Ttest"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginBottom="534dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+<!--latarka-->
+    <Button
+        android:id="@+id/button_latarka"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#77cff2"
+        android:text="Latarka"
+        app:icon="@drawable/latarka"
+        app:iconGravity="top"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="60dp"
-            android:layout_height="100dp"
-            android:layout_margin="20dp"
-            android:layout_weight="1"
-            android:backgroundTint="#77cff2"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="60dp"
-            android:layout_height="100dp"
-            android:layout_margin="20dp"
-            android:layout_weight="1"
-            android:backgroundTint="#77cff2"
-            android:text="Button" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="393dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="#77cff2"
+        android:text="2"
+        app:icon="@drawable/latarka"
+        app:iconGravity="top"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#77cff2"
+        android:text="3"
+        app:icon="@drawable/latarka"
+        app:iconGravity="top"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/button_latarka" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="60dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_weight="1"
-            android:backgroundTint="#77cff2"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="60dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_weight="1"
-            android:backgroundTint="#77cff2"
-            android:text="Button" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="316dp"
-        android:layout_marginBottom="315dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/button_4"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="#77cff2"
+        android:text="4"
+        app:icon="@drawable/latarka"
+        app:iconGravity="top"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="60dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:backgroundTint="#77cff2"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="60dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:backgroundTint="#77cff2"
-            android:text="Button"/>
-
-    </LinearLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#77cff2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button_2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
