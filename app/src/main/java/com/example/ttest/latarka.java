@@ -34,11 +34,13 @@ public class latarka extends AppCompatActivity {
                 if(hasCameraFlash){
                     if(flashOn){
                         flashOn = false;
+                        toggle_latarka.setImageResource(R.drawable.latarka_off);
                         flashLightOff();
                     }
                     else
                     {
                         flashOn = true;
+                        toggle_latarka.setImageResource(R.drawable.latarka_on);
                         flashLightOn();
                     }
                 }
@@ -55,10 +57,10 @@ public class latarka extends AppCompatActivity {
                 assert cameraManager != null;
                 String cameraId = cameraManager.getCameraIdList()[0];
                 cameraManager.setTorchMode(cameraId, true);
-                Toast.makeText(latarka.this, "Latarka jest włączona", Toast.LENGTH_SHORT).show();
+                Toast.makeText(latarka.this, "Latarka włączona", Toast.LENGTH_SHORT).show();
             }
             catch(CameraAccessException e){
-                Log.e("Camera Problem", "Nie można włączyć latarki");
+                Log.e("Camera Problem", "Nie można uruchomić latarki");
             }
         }
 
@@ -68,10 +70,10 @@ public class latarka extends AppCompatActivity {
             assert cameraManager != null;
             String cameraId = cameraManager.getCameraIdList()[0];
             cameraManager.setTorchMode(cameraId, false);
-            Toast.makeText(latarka.this, "Latarka jest wyłączona", Toast.LENGTH_SHORT).show();
+            Toast.makeText(latarka.this, "Latarka wyłączona", Toast.LENGTH_SHORT).show();
         }
         catch(CameraAccessException e){
-            Log.e("Camera Problem", "Nie można włączyć latarki");
+            Log.e("Camera Problem", "Nie można uruchomić latarki");
         }
     }
 }

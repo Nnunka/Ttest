@@ -13,7 +13,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button_latarka; //activity_main.xml -> activity_latarka.xml
+    Button button_1; //activity_main.xml -> activity_latarka.xml
+    Button button_2; //activity_main.xml -> activity_tryb_ciemny.xml
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,16 +28,28 @@ public class MainActivity extends AppCompatActivity {
                 PackageManager.PERMISSION_GRANTED);
 
 
-        //activity_main.xml -> activity_latarka.xml przez przycisk
-        button_latarka = (Button) findViewById(R.id.button_latarka);
+        //activity_main.xml -> activity_latarka.xml
+        button_1 = (Button) findViewById(R.id.button_1);
 
-        button_latarka.setOnClickListener(new View.OnClickListener() {
+        button_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,latarka.class);
                 startActivity(intent);
             }
-        }); //koniec activity_main.xml -> activity_latarka.xml przez przycisk
+        }); //koniec activity_main.xml -> activity_latarka.xml
+
+
+        //activity_main.xml -> activity_tryb_ciemny.xml
+        button_2 = (Button) findViewById(R.id.button_2);
+
+        button_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,tryb_ciemny.class);
+                startActivity(intent);
+            }
+        }); //koniec activity_main.xml -> activity_tryb_ciemny.xml
 
 
     }

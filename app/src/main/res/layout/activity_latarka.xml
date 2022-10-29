@@ -7,17 +7,38 @@
     android:layout_height="match_parent"
     tools:context=".latarka">
 
-
+  <!--toolbar-->
   <androidx.appcompat.widget.Toolbar
       android:id="@+id/toolbar"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="#77cff2"
+      android:layout_height="64dp"
+      android:background="#6082B6"
       android:minHeight="?attr/actionBarSize"
       android:theme="?attr/actionBarTheme"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
+
+  <!--logo-->
+  <ImageView
+      android:id="@+id/logo"
+      android:layout_width="0dp"
+      android:layout_height="64dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/logo_white" />
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Test Latarki"
+      android:textSize="48dp"
+      app:layout_constraintBottom_toTopOf="@+id/toggle_latarka"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
   <ImageButton
       android:id="@+id/toggle_latarka"
@@ -25,11 +46,12 @@
       android:layout_height="wrap_content"
       android:layout_centerInParent="true"
       android:backgroundTint="@android:color/transparent"
-      android:src="@drawable/latarka"
+      android:src="@drawable/latarka_off"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
 
 
 
