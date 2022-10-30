@@ -30,7 +30,6 @@
         app:srcCompat="@drawable/logo_white" />
 
 
-
     <!--latarka-->
     <Button
         android:id="@+id/button_1"
@@ -61,6 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
+    <!--żyroskop-->
     <Button
         android:id="@+id/button_3"
         android:layout_width="150dp"
@@ -68,13 +68,14 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="25dp"
         android:backgroundTint="#A7C7E7"
-        android:text="3"
-        app:icon="@drawable/latarka"
+        android:text="Żyroskop"
+        app:icon="@drawable/zyroskop"
         app:iconGravity="top"
         app:iconSize="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_1" />
 
+    <!--gps-->
     <Button
         android:id="@+id/button_4"
         android:layout_width="150dp"
@@ -82,13 +83,14 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="30dp"
         android:backgroundTint="#A7C7E7"
-        android:text="4"
-        app:icon="@drawable/latarka"
+        android:text="Gps"
+        app:icon="@drawable/gps"
         app:iconGravity="top"
         app:iconSize="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_2" />
 
+    <!--bluetooth-->
     <Button
         android:id="@+id/button_5"
         android:layout_width="150dp"
@@ -96,13 +98,14 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="25dp"
         android:backgroundTint="#A7C7E7"
-        android:text="5"
-        app:icon="@drawable/latarka"
+        android:text="Bluetooth"
+        app:icon="@drawable/bluetooth"
         app:iconGravity="top"
         app:iconSize="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_3" />
 
+    <!--czujnik światła-->
     <Button
         android:id="@+id/button_6"
         android:layout_width="150dp"
@@ -110,13 +113,12 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="30dp"
         android:backgroundTint="#A7C7E7"
-        android:text="4"
-        app:icon="@drawable/latarka"
+        android:text="światło"
+        app:icon="@drawable/swiatlo"
         app:iconGravity="top"
         app:iconSize="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_4" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
