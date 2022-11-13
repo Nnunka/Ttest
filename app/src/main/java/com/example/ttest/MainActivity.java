@@ -1,20 +1,14 @@
 package com.example.ttest;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageSwitcher;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -69,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         button_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,zyroskop.class);
+                Intent intent = new Intent(MainActivity.this, czujnik_zblizeniowy.class);
                 startActivity(intent);
             }
         }); //koniec activity_main.xml -> activity_zyroskop.xml

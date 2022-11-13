@@ -39,7 +39,7 @@
                 android:value="AIzaSyDgoLkBPkGsOqNygSwlzQSAHHPHg6Idzjw" />
         </activity>
         <activity
-            android:name=".zyroskop"
+            android:name=".czujnik_zblizeniowy"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

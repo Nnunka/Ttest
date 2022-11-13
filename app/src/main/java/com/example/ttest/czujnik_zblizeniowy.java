@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class zyroskop extends AppCompatActivity {
+public class czujnik_zblizeniowy extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_zyroskop);
+        setContentView(R.layout.activity_czujnik_zblizeniowy);
     }
 }
