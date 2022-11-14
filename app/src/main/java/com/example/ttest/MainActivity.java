@@ -27,19 +27,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                        Manifest.permission.READ_EXTERNAL_STORAGE},
-                PackageManager.PERMISSION_GRANTED);
-
-
         //activity_main.xml -> activity_latarka.xml
         button_1 = (Button) findViewById(R.id.button_1);
 
         button_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,latarka.class);
+                Intent intent = new Intent(MainActivity.this, latarka.class);
                 startActivity(intent);
             }
         }); //koniec activity_main.xml -> activity_latarka.xml
@@ -51,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         button_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,tryb_ciemny.class);
+                Intent intent = new Intent(MainActivity.this, tryb_ciemny.class);
                 startActivity(intent);
             }
         }); //koniec activity_main.xml -> activity_tryb_ciemny.xml
@@ -75,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         button_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,gps.class);
+                Intent intent = new Intent(MainActivity.this, gps.class);
                 startActivity(intent);
             }
         }); //koniec activity_main.xml -> gps.xml
@@ -87,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         button_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,bluetooth.class);
+                Intent intent = new Intent(MainActivity.this, bluetooth.class);
                 startActivity(intent);
             }
         }); //koniec activity_main.xml -> activity_bluetooth.xml
@@ -99,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         button_6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,czujnik_swiatla.class);
+                Intent intent = new Intent(MainActivity.this, dzwiek.class);
                 startActivity(intent);
             }
         }); //koniec activity_main.xml -> activity_czujnik_swiatla.xml

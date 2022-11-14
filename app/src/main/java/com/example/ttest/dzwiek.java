@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class czujnik_swiatla extends AppCompatActivity {
+public class dzwiek extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_czujnik_swiatla);
+        setContentView(R.layout.activity_dzwiek);
     }
 }

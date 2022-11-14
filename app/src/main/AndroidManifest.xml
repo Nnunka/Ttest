@@ -18,7 +18,7 @@
         android:theme="@style/Theme.Ttest"
         tools:targetApi="31">
         <activity
-            android:name=".czujnik_swiatla"
+            android:name=".dzwiek"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
