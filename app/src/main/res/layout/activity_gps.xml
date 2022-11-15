@@ -28,21 +28,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_white" />
 
-
     <TextView
-        android:id="@+id/tv_location"
+        android:id="@+id/text_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/b_location"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="230dp"
+        android:text="Obecna lokalizacja: "
+        app:layout_constraintBottom_toTopOf="@+id/button_location"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.508" />
 
     <Button
-        android:id="@+id/b_location"
+        android:id="@+id/button_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lokalizacja"
@@ -51,6 +50,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

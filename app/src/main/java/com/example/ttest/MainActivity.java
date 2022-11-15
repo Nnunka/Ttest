@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         //activity_main.xml -> activity_latarka.xml
-        button_1 = (Button) findViewById(R.id.button_1);
+         button_1 = (Button) findViewById(R.id.button_1);
 
-        button_1.setOnClickListener(new View.OnClickListener() {
+         button_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, latarka.class);

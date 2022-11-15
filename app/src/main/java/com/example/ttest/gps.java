@@ -1,106 +1,95 @@
 package com.example.ttest;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+import java.util.Locale;
 
-public class gps extends AppCompatActivity implements IBaseGpsListener {
 
-    private static final int PERMISSION_LOCATION = 1000;
+public class gps extends AppCompatActivity implements LocationListener {
 
-    TextView tv_location;
-    Button b_location;
+    Button button_location;
+    TextView text_location;
+    LocationManager locationManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gps);
 
-        tv_location = findViewById(R.id.tv_location);
-        b_location = findViewById(R.id.b_location);
+        button_location = findViewById(R.id.button_location);
+        text_location = findViewById(R.id.text_location);
 
-        b_location.setOnClickListener(new View.OnClickListener() {
+
+        if(ContextCompat.checkSelfPermission(gps.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(gps.this, new String[]{
+                    Manifest.permission.ACCESS_FINE_LOCATION
+            }, 100);
+        }
+
+
+        button_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                    requestPermissions(new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_LOCATION);
-                }
-                else {
-                    showLocation();
-                }
+                getLocation();
             }
         });
-    }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == PERMISSION_LOCATION) {
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                showLocation();
-            } else {
-                Toast.makeText(this, "Nie ma dostępu!", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        }
     }
 
     @SuppressLint("MissingPermission")
-    private void showLocation() {
-        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
-        if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            tv_location.setText("Znajduję lokalizacje...");
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+    private void getLocation() {
+        try {
+            locationManager =  (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5, gps.this);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        else {
-            Toast.makeText(this, "Włącz lokalizacje!", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-        }
-    }
-
-    private String hereLocation(Location location) {
-        return "Szerokość: " + location.getLatitude() + "\nDługość: " + location.getLongitude();
     }
 
     @Override
     public void onLocationChanged(Location location) {
-        //update
-        tv_location.setText(hereLocation(location));
-    }
-
-    @Override
-    public void onProviderDisabled(String provider) {
-        //empty
-    }
-
-    @Override
-    public void onProviderEnabled(String provider) {
-        //empty
+        Toast.makeText(this, ""+location.getLatitude()+", "+location.getLongitude(), Toast.LENGTH_SHORT).show();
+        try {
+            Geocoder geocoder = new Geocoder(gps.this, Locale.getDefault());
+            List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+            String address = addresses.get(0).getAddressLine(0);
+            text_location.setText(address);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
-        //empty
+
     }
 
     @Override
-    public void onGpsStatusChanged(int event) {
-        //empty
+    public void onProviderEnabled(String provider) {
+
     }
+
+    @Override
+    public void onProviderDisabled(String provider) {
+
+    }
+
 }
