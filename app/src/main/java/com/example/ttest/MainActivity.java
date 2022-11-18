@@ -1,10 +1,7 @@
 package com.example.ttest;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
@@ -15,10 +12,12 @@ public class MainActivity extends AppCompatActivity {
 
     Button button_1; //activity_main.xml -> activity_latarka.xml
     Button button_2; //activity_main.xml -> activity_tryb_ciemny.xml
-    Button button_3; //activity_main.xml -> activity_zyroskop.xml
+    Button button_3; //activity_main.xml -> activity_czujnik_zblizeniowy.xml
     Button button_4; //activity_main.xml -> activity_gps.xml
-    Button button_5; //activity_main.xml -> activity_gps.xml
-    Button button_6; //activity_main.xml -> activity_czujnik_swiatla.xml
+    Button button_5; //activity_main.xml -> activity_bluetooth.xml
+    Button button_6; //activity_main.xml -> activity_dzwiek.xml
+    Button button_7; //activity_main.xml -> activity_mikrofon.xml
+    Button button_9; //activity_main.xml -> activity_wyniki.xml
 
 
     @Override
@@ -51,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         }); //koniec activity_main.xml -> activity_tryb_ciemny.xml
 
 
-        //activity_main.xml -> activity_zyroskop.xml
+        //activity_main.xml -> activity_zblizeniowy.xml
         button_3 = (Button) findViewById(R.id.button_3);
 
         button_3.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, czujnik_zblizeniowy.class);
                 startActivity(intent);
             }
-        }); //koniec activity_main.xml -> activity_zyroskop.xml
+        }); //koniec activity_main.xml -> activity_zblizeniowy.xml
 
 
         //activity_main.xml -> activity_gps.xml
@@ -72,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, gps.class);
                 startActivity(intent);
             }
-        }); //koniec activity_main.xml -> gps.xml
+        }); //koniec activity_main.xml -> activity_gps.xml
 
 
         //activity_main.xml -> activity_bluetooth.xml
@@ -87,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         }); //koniec activity_main.xml -> activity_bluetooth.xml
 
 
-        //activity_main.xml -> activity_czujnik_swiatla.xml
+        //activity_main.xml -> activity_dzwiek.xml
         button_6 = (Button) findViewById(R.id.button_6);
 
         button_6.setOnClickListener(new View.OnClickListener() {
@@ -96,7 +95,31 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, dzwiek.class);
                 startActivity(intent);
             }
-        }); //koniec activity_main.xml -> activity_czujnik_swiatla.xml
+        }); //koniec activity_main.xml -> activity_dzwiek.xml
+
+
+        //activity_main.xml -> activity_mikrofon.xml
+        button_7 = (Button) findViewById(R.id.button_7);
+
+        button_7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, mikrofon.class);
+                startActivity(intent);
+            }
+        }); //koniec activity_main.xml -> activity_mikrofon.xml
+
+
+        //activity_main.xml -> activity_wyniki.xml
+        button_9 = (Button) findViewById(R.id.button_9);
+
+        button_9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, wyniki.class);
+                startActivity(intent);
+            }
+        }); //koniec activity_main.xml -> activity_wyniki.xml
 
 
     }

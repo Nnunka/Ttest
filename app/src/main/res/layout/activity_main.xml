@@ -34,7 +34,7 @@
         android:id="@+id/button_1"
         android:layout_width="150dp"
         android:layout_height="120dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="25dp"
         android:backgroundTint="#A7C7E7"
         android:text="Latarka"
@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="120dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="35dp"
         android:backgroundTint="#A7C7E7"
         android:text="Tryb ciemny"
         app:icon="@drawable/tryb_ciemny"
@@ -59,13 +59,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-    <!--żyroskop-->
+    <!--czujnik zbliżeniowy-->
     <Button
         android:id="@+id/button_3"
         android:layout_width="150dp"
         android:layout_height="120dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#A7C7E7"
         android:text="Zbliżeniowy"
         app:icon="@drawable/czujnik_zblizeniowy"
@@ -79,8 +79,8 @@
         android:id="@+id/button_4"
         android:layout_width="150dp"
         android:layout_height="120dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp"
         android:backgroundTint="#A7C7E7"
         android:text="Gps"
         app:icon="@drawable/gps"
@@ -94,8 +94,8 @@
         android:id="@+id/button_5"
         android:layout_width="150dp"
         android:layout_height="120dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#A7C7E7"
         android:text="Bluetooth"
         app:icon="@drawable/bluetooth"
@@ -104,13 +104,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_3" />
 
-    <!--czujnik światła-->
+    <!--dźwięk-->
     <Button
         android:id="@+id/button_6"
         android:layout_width="150dp"
         android:layout_height="120dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp"
         android:backgroundTint="#A7C7E7"
         android:text="Dźwięk"
         app:icon="@drawable/glosnik"
@@ -118,6 +118,35 @@
         app:iconSize="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_4" />
+
+    <!--dźwięk-->
+    <Button
+        android:id="@+id/button_7"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#A7C7E7"
+        android:text="Mikrofon"
+        app:icon="@drawable/mikrofon"
+        app:iconGravity="top"
+        app:iconSize="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_5" />
+
+    <!--wyniki-->
+    <Button
+        android:id="@+id/button_9"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#6082B6"
+        android:text="Wyniki"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_7" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
