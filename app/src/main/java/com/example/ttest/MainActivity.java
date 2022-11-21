@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Button button_5; //activity_main.xml -> activity_bluetooth.xml
     Button button_6; //activity_main.xml -> activity_dzwiek.xml
     Button button_7; //activity_main.xml -> activity_mikrofon.xml
+    Button button_8; //activity_main.xml -> activity_aparat.xml
     Button button_9; //activity_main.xml -> activity_wyniki.xml
 
 
@@ -108,6 +109,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }); //koniec activity_main.xml -> activity_mikrofon.xml
+
+
+        //activity_main.xml -> activity_aparat.xml
+        button_8 = (Button) findViewById(R.id.button_8);
+
+        button_8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, aparat.class);
+                startActivity(intent);
+            }
+        }); //koniec activity_main.xml -> activity_aparat.xml
 
 
         //activity_main.xml -> activity_wyniki.xml
