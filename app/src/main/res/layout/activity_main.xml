@@ -134,6 +134,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_5" />
 
+    <!--aparat-->
+    <Button
+        android:id="@+id/button_8"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp"
+        android:backgroundTint="#A7C7E7"
+        android:text="Aparat"
+        app:icon="@drawable/aparat"
+        app:iconGravity="top"
+        app:iconSize="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_6" />
+
     <!--wyniki-->
     <Button
         android:id="@+id/button_9"
