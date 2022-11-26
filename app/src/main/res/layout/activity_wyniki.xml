@@ -28,4 +28,88 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_white" />
 
+
+
+    <TextView
+        android:id="@+id/text_podsumowanie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="24dp"
+        android:text="Podsumowanie testów"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/text_pytanie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:text="Czy test przeszedł pomyślnie?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_podsumowanie" />
+
+
+    <TextView
+        android:id="@+id/test_1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="20dp"
+
+        android:text="Latarka: "
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_pytanie" />
+
+    <RadioGroup
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/test_1"
+        app:layout_constraintTop_toBottomOf="@+id/text_pytanie">
+
+        <RadioButton
+            android:id="@+id/tak_latarka"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:text="Tak" />
+
+        <RadioButton
+            android:id="@+id/nie_latarka"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:text="Nie" />
+    </RadioGroup>
+
+
+
+    <TextView
+        android:id="@+id/text_wyniki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/podsumuj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Podsumuj"
+        app:layout_constraintBottom_toTopOf="@+id/text_wyniki"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
