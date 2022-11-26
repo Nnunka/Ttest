@@ -336,7 +336,6 @@
     <!--aparat-->
 
 
-
     <Button
         android:id="@+id/podsumuj"
         android:layout_width="wrap_content"
@@ -347,15 +346,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/test_aparat" />
 
+    <!--wyświetlenie wyników-->
     <TextView
-        android:id="@+id/text_wyniki"
+        android:id="@+id/wynik_latarka"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/podsumuj" />
+
+    <TextView
+        android:id="@+id/wynik_tryb_ciemny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wynik_latarka" />
+
+    <TextView
+        android:id="@+id/wynik_zblizeniowy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wynik_tryb_ciemny" />
+
+    <TextView
+        android:id="@+id/wynik_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wynik_zblizeniowy" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

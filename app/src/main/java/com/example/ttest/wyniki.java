@@ -11,7 +11,10 @@ import android.widget.TextView;
 public class wyniki extends AppCompatActivity {
 
     RadioButton tak_latarka, nie_latarka;
-    TextView text_wyniki;
+    RadioButton tak_tryb_ciemny, nie_tryb_ciemny;
+
+    TextView wynik_latarka, wynik_tryb_ciemny;
+
     Button podsumuj;
 
     @Override
@@ -19,23 +22,38 @@ public class wyniki extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wyniki);
 
-        tak_latarka = findViewById(R.id.tak_latarka);
-        nie_latarka = findViewById(R.id.nie_latarka);
-        text_wyniki = findViewById(R.id.text_wyniki);
-        podsumuj = findViewById(R.id.podsumuj);
+        tak_latarka = (RadioButton) findViewById(R.id.tak_latarka);
+        nie_latarka = (RadioButton) findViewById(R.id.nie_latarka);
+        wynik_latarka = (TextView) findViewById(R.id.wynik_latarka);
+        podsumuj = (Button) findViewById(R.id.podsumuj);
+
+        tak_tryb_ciemny = (RadioButton) findViewById(R.id.tak_tryb_ciemny);
+        nie_tryb_ciemny = (RadioButton) findViewById(R.id.nie_tryb_ciemny);
+        wynik_tryb_ciemny = (TextView) findViewById(R.id.wynik_tryb_ciemny);
+        podsumuj = (Button) findViewById(R.id.podsumuj);
 
         podsumuj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if(tak_latarka.isChecked()) {
-                    ((TextView)findViewById(R.id.text_wyniki)).setText("Test latarki przebiegł pomyślnie");
+                    ((TextView)findViewById(R.id.wynik_latarka)).setText("Test latarki przebiegł pomyślnie");
                 }
-                else if (nie_latarka.isChecked()) {
-                    ((TextView)findViewById(R.id.text_wyniki)).setText("Test latarki NIE przebiegł pomyślnie");
+                if (nie_latarka.isChecked()) {
+                    ((TextView)findViewById(R.id.wynik_latarka)).setText("Test latarki NIE przebiegł pomyślnie");
                 }
+
+
+                if(tak_tryb_ciemny.isChecked()) {
+                    ((TextView)findViewById(R.id.wynik_tryb_ciemny)).setText("Test trybu ciemnego przebiegł pomyślnie");
+                }
+                if (nie_tryb_ciemny.isChecked()) {
+                    ((TextView)findViewById(R.id.wynik_tryb_ciemny)).setText("Test trybu ciemnego NIE przebiegł pomyślnie");
+                }
+
+
             }
         });
-
 
     }
 }
