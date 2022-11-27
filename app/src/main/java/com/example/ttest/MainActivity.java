@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     Button button_2; //activity_main.xml -> activity_tryb_ciemny.xml
     Button button_3; //activity_main.xml -> activity_czujnik_zblizeniowy.xml
     Button button_4; //activity_main.xml -> activity_gps.xml
-    Button button_5; //activity_main.xml -> activity_bluetooth.xml
+    Button button_5; //activity_main.xml -> activity_wifi.xml
     Button button_6; //activity_main.xml -> activity_dzwiek.xml
     Button button_7; //activity_main.xml -> activity_mikrofon.xml
     Button button_8; //activity_main.xml -> activity_aparat.xml
@@ -75,16 +75,16 @@ public class MainActivity extends AppCompatActivity {
         }); //koniec activity_main.xml -> activity_gps.xml
 
 
-        //activity_main.xml -> activity_bluetooth.xml
+        //activity_main.xml -> activity_wifi.xml
         button_5 = (Button) findViewById(R.id.button_5);
 
         button_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, bluetooth.class);
+                Intent intent = new Intent(MainActivity.this, wifi.class);
                 startActivity(intent);
             }
-        }); //koniec activity_main.xml -> activity_bluetooth.xml
+        }); //koniec activity_main.xml -> activity_wifi.xml
 
 
         //activity_main.xml -> activity_dzwiek.xml
