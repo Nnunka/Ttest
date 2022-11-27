@@ -29,6 +29,20 @@
         app:srcCompat="@drawable/logo_white" />
 
 
+    <Switch
+        android:id="@+id/wifi_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="352dp"
+        android:text="WiFi jest wyłączone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
