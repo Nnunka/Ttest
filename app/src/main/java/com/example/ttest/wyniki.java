@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,8 @@ public class wyniki extends AppCompatActivity {
             tak_wifi, nie_wifi, tak_dzwiek, nie_dzwiek, tak_mikrofon, nie_mikrofon, tak_aparat, nie_aparat;
 
     TextView wynik_latarka, wynik_tryb_ciemny, wynik_zblizeniowy, wynik_gps, wynik_wifi, wynik_dzwiek, wynik_mikrofon, wynik_aparat;
+
+    TextView model;
 
     Button podsumuj;
 
@@ -59,6 +62,13 @@ public class wyniki extends AppCompatActivity {
         wynik_aparat = (TextView) findViewById(R.id.wynik_aparat);
 
         podsumuj = (Button) findViewById(R.id.podsumuj);
+
+
+
+        model = (TextView) findViewById(R.id.model);
+        String stringBuildModel = "Marka i model: " + Build.MANUFACTURER + " " + Build.MODEL;
+        model.setText(stringBuildModel);
+
 
 
         podsumuj.setOnClickListener(new View.OnClickListener() {

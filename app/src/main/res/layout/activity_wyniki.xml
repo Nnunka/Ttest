@@ -30,12 +30,30 @@
 
 
 
+    <!--model telefonu-->
+    <TextView
+        android:id="@+id/model"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:text=""
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_podsumowanie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0" />
+    <!--model telefonu-->
+
+
+
+
     <TextView
         android:id="@+id/text_podsumowanie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textSize="24dp"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
         android:text="Podsumowanie testów"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="18dp"
+        android:textSize="20dp"
         android:text="Czy test przeszedł pomyślnie?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
