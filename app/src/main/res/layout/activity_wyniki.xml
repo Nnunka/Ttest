@@ -196,13 +196,13 @@
     <!--gps-->
 
 
-    <!--???-->
+    <!--wifi-->
     <TextView
-        android:id="@+id/test_5"
+        android:id="@+id/test_wifi"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginStart="95dp"
-        android:text="---: "
+        android:text="Wifi: "
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/test_gps" />
@@ -213,22 +213,22 @@
         android:layout_height="30dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/test_5"
+        app:layout_constraintStart_toEndOf="@+id/test_wifi"
         app:layout_constraintTop_toBottomOf="@+id/test4">
 
         <RadioButton
-            android:id="@+id/tak_idk"
+            android:id="@+id/tak_wifi"
             android:layout_width="60dp"
             android:layout_height="30dp"
             android:text="Tak" />
 
         <RadioButton
-            android:id="@+id/nie_idk"
+            android:id="@+id/nie_wifi"
             android:layout_width="60dp"
             android:layout_height="30dp"
             android:text="Nie" />
     </RadioGroup>
-    <!--???-->
+    <!--wifi-->
 
 
     <!--dzwięk-->
@@ -240,7 +240,7 @@
         android:text="Dźwięk: "
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/test_5" />
+        app:layout_constraintTop_toBottomOf="@+id/test_wifi" />
 
     <RadioGroup
         android:id="@+id/test6"
@@ -336,15 +336,19 @@
     <!--aparat-->
 
 
+
     <Button
         android:id="@+id/podsumuj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:backgroundTint="#A7C7E7"
         android:text="Podsumuj"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/test_aparat" />
+
+
 
     <!--wyświetlenie wyników-->
     <TextView
@@ -383,6 +387,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wynik_zblizeniowy" />
+
+    <TextView
+        android:id="@+id/wynik_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wynik_gps" />
+
+    <TextView
+        android:id="@+id/wynik_dzwiek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wynik_wifi" />
+
+    <TextView
+        android:id="@+id/wynik_mikrofon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wynik_dzwiek" />
+
+    <TextView
+        android:id="@+id/wynik_aparat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wynik_mikrofon" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
