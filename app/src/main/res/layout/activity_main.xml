@@ -89,7 +89,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_2" />
 
-    <!--bluetooth-->
+    <!--wifi-->
     <Button
         android:id="@+id/button_5"
         android:layout_width="150dp"
@@ -97,8 +97,8 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#A7C7E7"
-        android:text="Bluetooth"
-        app:icon="@drawable/bluetooth"
+        android:text="Wifi"
+        app:icon="@drawable/wifi"
         app:iconGravity="top"
         app:iconSize="70dp"
         app:layout_constraintStart_toStartOf="parent"
