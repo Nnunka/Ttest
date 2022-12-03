@@ -15,6 +15,7 @@ import android.widget.Toast;
 public class tryb_ciemny extends AppCompatActivity {
 
     private ImageButton toggle_tryb_ciemny;
+    private ImageView logo;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class tryb_ciemny extends AppCompatActivity {
         setContentView(R.layout.activity_tryb_ciemny);
 
         toggle_tryb_ciemny = findViewById(R.id.toggle_tryb_ciemny);
+        logo = findViewById(R.id.logo);
 
         SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -30,10 +32,13 @@ public class tryb_ciemny extends AppCompatActivity {
         if(isDarkModeOn){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             toggle_tryb_ciemny.setImageResource(R.drawable.tryb_ciemny_on);
+            logo.setImageResource(R.drawable.logo_black);
         }
         else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             toggle_tryb_ciemny.setImageResource(R.drawable.tryb_ciemny_off);
+            logo.setImageResource(R.drawable.logo_white);
+
         }
 
         toggle_tryb_ciemny.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +49,7 @@ public class tryb_ciemny extends AppCompatActivity {
                     editor.putBoolean("isDarkModeOn", false);
                     editor.apply();
                     toggle_tryb_ciemny.setImageResource(R.drawable.tryb_ciemny_off);
+                    logo.setImageResource(R.drawable.logo_white);
                     Toast.makeText(tryb_ciemny.this, "Tryb ciemny wyłączony", Toast.LENGTH_SHORT).show();
                 }
                 else {
@@ -51,6 +57,7 @@ public class tryb_ciemny extends AppCompatActivity {
                     editor.putBoolean("isDarkModeOn", true);
                     editor.apply();
                     toggle_tryb_ciemny.setImageResource(R.drawable.tryb_ciemny_on);
+                    logo.setImageResource(R.drawable.logo_black);
                     Toast.makeText(tryb_ciemny.this, "Tryb ciemny włączony", Toast.LENGTH_SHORT).show();
                 }
             }
