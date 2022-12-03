@@ -29,29 +29,39 @@
         app:srcCompat="@drawable/logo_white" />
 
     <TextView
-        android:id="@+id/text_location"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="230dp"
-        android:text="Obecna lokalizacja: "
+        android:text="Test Lokalizacji"
+        android:textSize="36dp"
         app:layout_constraintBottom_toTopOf="@+id/button_location"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.508" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <Button
         android:id="@+id/button_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lokalizacja"
+        android:text="Znajdź lokalizację"
         android:backgroundTint="#A7C7E7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
+    <TextView
+        android:id="@+id/text_location"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Obecna lokalizacja "
+        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_location"
+        app:layout_constraintVertical_bias="0.0" />
 
-
-
+    
 </androidx.constraintlayout.widget.ConstraintLayout>

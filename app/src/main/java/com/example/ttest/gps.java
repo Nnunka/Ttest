@@ -41,7 +41,7 @@ public class gps extends AppCompatActivity implements LocationListener {
         if(ContextCompat.checkSelfPermission(gps.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(gps.this, new String[]{
                     Manifest.permission.ACCESS_FINE_LOCATION
-            }, 100);
+            }, 1000);
         }
 
 
