@@ -29,11 +29,12 @@
         app:srcCompat="@drawable/logo_white" />
 
     <TextView
-        android:id="@+id/idTxt"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="tu pojawią się informacje"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Test Wifi"
+        android:textSize="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/idBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -42,12 +43,23 @@
         android:id="@+id/idBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Informacje o sieci"
         android:onClick="getWifiInformation"
-        app:layout_constraintBottom_toTopOf="@+id/idTxt"
+        android:backgroundTint="#A7C7E7"
+        android:text="Informacje o sieci"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/idTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="tu pojawią się informacje"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
