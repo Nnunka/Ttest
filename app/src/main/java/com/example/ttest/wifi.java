@@ -66,7 +66,7 @@ public class wifi extends AppCompatActivity {
 
             switch (wifiStateExtra) {
                 case WifiManager.WIFI_STATE_ENABLED:
-                    wifiSwitch.setText("WiFi jest włączone, można pobrac informacje");
+                    wifiSwitch.setText("WiFi jest włączone, można pobrać informacje");
                     break;
                 case WifiManager.WIFI_STATE_DISABLED:
 
