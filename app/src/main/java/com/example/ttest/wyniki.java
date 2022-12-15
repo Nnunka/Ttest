@@ -77,65 +77,81 @@ public class wyniki extends AppCompatActivity {
 
                 if(tak_latarka.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_latarka)).setText("Test latarki przebiegł pomyślnie");
+                    wynik_latarka.setTextColor(Color.parseColor("#008000"));
                 }
                 if (nie_latarka.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_latarka)).setText("Test latarki NIE przebiegł pomyślnie");
+                    wynik_latarka.setTextColor(Color.parseColor("#FF0000"));
                 }
 
 
                 if(tak_tryb_ciemny.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_tryb_ciemny)).setText("Test trybu ciemnego przebiegł pomyślnie");
+                    wynik_tryb_ciemny.setTextColor(Color.parseColor("#008000"));
                 }
                 if (nie_tryb_ciemny.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_tryb_ciemny)).setText("Test trybu ciemnego NIE przebiegł pomyślnie");
+                    wynik_tryb_ciemny.setTextColor(Color.parseColor("#FF0000"));
                 }
 
 
                 if(tak_zblizeniowy.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_zblizeniowy)).setText("Test czujnika zbliżeniowego przebiegł pomyślnie");
+                    wynik_zblizeniowy.setTextColor(Color.parseColor("#008000"));
                 }
                 if (nie_zblizeniowy.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_zblizeniowy)).setText("Test czujnika zbliżeniowego NIE przebiegł pomyślnie");
+                    wynik_zblizeniowy.setTextColor(Color.parseColor("#FF0000"));
                 }
 
 
                 if(tak_gps.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_gps)).setText("Test GPS przebiegł pomyślnie");
+                    wynik_gps.setTextColor(Color.parseColor("#008000"));
                 }
                 if (nie_gps.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_gps)).setText("Test GPS NIE przebiegł pomyślnie");
+                    wynik_gps.setTextColor(Color.parseColor("#FF0000"));
                 }
 
 
                 if(tak_wifi.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_wifi)).setText("Test Wifi przebiegł pomyślnie");
+                    wynik_wifi.setTextColor(Color.parseColor("#008000"));
                 }
                 if (nie_wifi.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_wifi)).setText("Test Wifi NIE przebiegł pomyślnie");
+                    wynik_wifi.setTextColor(Color.parseColor("#FF0000"));
                 }
 
 
                 if(tak_dzwiek.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_dzwiek)).setText("Test dźwięku przebiegł pomyślnie");
+                    wynik_dzwiek.setTextColor(Color.parseColor("#008000"));
                 }
                 if (nie_dzwiek.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_dzwiek)).setText("Test dźwięku NIE przebiegł pomyślnie");
+                    wynik_dzwiek.setTextColor(Color.parseColor("#FF0000"));
                 }
 
 
                 if(tak_mikrofon.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_mikrofon)).setText("Test mikrofonu przebiegł pomyślnie");
+                    wynik_mikrofon.setTextColor(Color.parseColor("#008000"));
                 }
                 if (nie_mikrofon.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_mikrofon)).setText("Test mikrofonu NIE przebiegł pomyślnie");
+                    wynik_mikrofon.setTextColor(Color.parseColor("#FF0000"));
                 }
 
 
                 if(tak_aparat.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_aparat)).setText("Test aparatu przebiegł pomyślnie");
+                    wynik_aparat.setTextColor(Color.parseColor("#008000"));
                 }
                 if (nie_aparat.isChecked()) {
                     ((TextView)findViewById(R.id.wynik_aparat)).setText("Test aparatu NIE przebiegł pomyślnie");
+                    wynik_aparat.setTextColor(Color.parseColor("#FF0000"));
                 }
 
             }
