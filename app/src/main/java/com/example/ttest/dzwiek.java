@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class dzwiek extends AppCompatActivity {
 
@@ -22,6 +23,7 @@ public class dzwiek extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                sound.start();
+               Toast.makeText(dzwiek.this, "Odtwarzanie nagrania", Toast.LENGTH_SHORT).show();
             }
         });
     }
